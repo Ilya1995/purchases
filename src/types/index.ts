@@ -14,14 +14,14 @@ export type UserFirebaseType = {
   value: UserAuthType;
 };
 
-export type PurchaseType = {
+export type ItemType = {
   completed: boolean;
   text: string;
 };
 
-export type PurchaseFirebaseType = {
+export type ItemFirebaseType = {
   key: string;
-  value: PurchaseType;
+  value: ItemType;
 };
 
 export type InitialStateUsersType = {

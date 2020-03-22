@@ -1,6 +1,6 @@
 {
   "name": "purchases",
-  "version": "2.1.1",
+  "version": "2.1.5",
   "private": true,
   "homepage": "http://ilya1995.github.io/purchases",
   "dependencies": {
@@ -11,6 +11,7 @@
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/react-redux": "^7.1.7",
+    "@types/react-swipeable-views": "^0.13.0",
     "@types/redux-logger": "^3.0.7",
     "firebase": "^7.9.3",
     "password-hash": "^1.2.2",
@@ -19,8 +20,11 @@
     "react-redux": "^7.1.3",
     "react-redux-firebase": "^3.1.2",
     "react-scripts": "3.4.0",
+    "react-swipeable-views": "^0.13.9",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
+    "reselect": "^4.0.0",
     "typescript": "^3.7.5"
   },
   "scripts": {

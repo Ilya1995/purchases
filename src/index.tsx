@@ -7,6 +7,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { App } from './App';
 import { rootReducer } from './reducers';
@@ -23,7 +24,11 @@ if (typeof Storage !== 'undefined' && localStorage.user) {
   let oldStateUser = JSON.parse(localStorage.user);
   initialState = { users: { user: oldStateUser } };
 }
-const store = createStore(rootReducer, initialState, applyMiddleware(logger));
+const store = createStore(
+  rootReducer,
+  initialState,
+  composeWithDevTools(applyMiddleware(logger))
+);
 const rrfProps = {
   firebase,
   config: rrfConfig,

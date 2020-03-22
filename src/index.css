@@ -24,6 +24,11 @@ code {
   margin: 40px 0;
 }
 
+#container .button-remove {
+  float: right;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 400px) {
   #container .button {
     display: none;
