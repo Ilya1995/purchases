@@ -7,5 +7,7 @@ export const sortItemsSelector = (titleItem: string) =>
     (state: RootReducerType) => state.firebase.ordered[titleItem],
     (items: ItemFirebaseType[]) =>
       items &&
-      items.sort((a, b) => (a.value.completed > b.value.completed ? 1 : -1))
+      [...items.reverse()].sort((a, b) =>
+        a.value.completed > b.value.completed ? 1 : -1
+      )
   );
