@@ -2,12 +2,12 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
-
 import Container from '@material-ui/core/Container';
 import Avatar from '@material-ui/core/Avatar';
 import TextField from '@material-ui/core/TextField';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import { UserAuthType } from '../types';
 
 type PropsType = {
@@ -19,7 +19,6 @@ const ModalLogin: React.FC<PropsType> = props => {
     event.preventDefault();
     const login = event.currentTarget.login.value;
     const password = event.currentTarget.password.value;
-
     props.checkAuth({ login, password });
   };
 
@@ -31,13 +30,11 @@ const ModalLogin: React.FC<PropsType> = props => {
     >
       <DialogContent>
         <Container component="main" maxWidth="xs">
-          <div
-            style={{
-              marginTop: 50,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center'
-            }}
+          <Box
+            mt={6}
+            display={'flex'}
+            flexDirection={'column'}
+            alignItems={'center'}
           >
             <Avatar>
               <LockOutlinedIcon />
@@ -81,7 +78,7 @@ const ModalLogin: React.FC<PropsType> = props => {
                 Войти
               </Button>
             </form>
-          </div>
+          </Box>
         </Container>
       </DialogContent>
     </Dialog>

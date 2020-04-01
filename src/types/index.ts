@@ -1,4 +1,5 @@
 export const PUT_USER = 'PUT_USER';
+export const LOGOUT_USER = 'LOGOUT_USER';
 
 export type UserAuthType = {
   login: string;
@@ -17,6 +18,7 @@ export type UserFirebaseType = {
 export type ItemType = {
   completed: boolean;
   text: string;
+  timestamp: number;
 };
 
 export type ItemFirebaseType = {
@@ -32,3 +34,9 @@ export type PutUserActionType = {
   type: typeof PUT_USER;
   payload: UserType;
 };
+
+export type LogoutUserActionType = {
+  type: typeof LOGOUT_USER;
+};
+
+export type UserActionTypes = PutUserActionType | LogoutUserActionType;

@@ -19,7 +19,8 @@ const ItemAdd: React.FC<PropsType> = ({ titleItem }) => {
     const text = newItemText.trim();
     const newItem = {
       text: text,
-      completed: false
+      completed: false,
+      timestamp: Date.now()
     };
     if (text) {
       firebase.push(titleItem, newItem);

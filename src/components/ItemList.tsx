@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useFirebase, isLoaded, isEmpty } from 'react-redux-firebase';
 import { useSelector } from 'react-redux';
 import { ItemFirebaseType } from '../types';
+import { RootReducerType } from '../reducers';
 import { sortItemsSelector } from '../selectors';
-
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import List from '@material-ui/core/List';
@@ -20,8 +20,9 @@ type PropsType = {
 };
 
 const ItemList: React.FC<PropsType> = ({ titleItem }) => {
-  const items: ItemFirebaseType[] = useSelector(
-    sortItemsSelector.call(null, titleItem)
+  const selectNumOfTodosWithIsDone = useMemo(sortItemsSelector, []);
+  const items = useSelector((state: RootReducerType) =>
+    selectNumOfTodosWithIsDone(state, titleItem)
   );
 
   const firebase = useFirebase();
