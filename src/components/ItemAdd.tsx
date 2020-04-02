@@ -15,7 +15,8 @@ const ItemAdd: React.FC<PropsType> = ({ titleItem }) => {
   const inputEl = useRef(document.createElement('input'));
   const firebase = useFirebase();
 
-  const addItem = () => {
+  const addItem = (event: React.FormEvent) => {
+    event.preventDefault();
     const text = newItemText.trim();
     const newItem = {
       text: text,
@@ -30,7 +31,7 @@ const ItemAdd: React.FC<PropsType> = ({ titleItem }) => {
   };
 
   return (
-    <>
+    <form onSubmit={addItem}>
       <Grid
         container
         direction="row"
@@ -60,7 +61,7 @@ const ItemAdd: React.FC<PropsType> = ({ titleItem }) => {
           Добавить
         </Button>
       </Grid>
-    </>
+    </form>
   );
 };
 
