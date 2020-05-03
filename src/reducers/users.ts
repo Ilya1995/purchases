@@ -2,11 +2,11 @@ import {
   InitialStateUsersType,
   PUT_USER,
   LOGOUT_USER,
-  UserActionTypes
+  UserActionTypes,
 } from '../types';
 
 const initialState: InitialStateUsersType = {
-  user: null
+  user: null,
 };
 
 export function users(

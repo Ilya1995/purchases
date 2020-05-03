@@ -3,7 +3,7 @@ import {
   LOGOUT_USER,
   PutUserActionType,
   LogoutUserActionType,
-  UserType
+  UserType,
 } from '../types';
 
 export const putUser = (user: UserType): PutUserActionType => {

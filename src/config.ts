@@ -17,5 +17,5 @@ export const fbConfig: FbConfigType = {
   storageBucket: 'todos-c16da.appspot.com',
   messagingSenderId: '753970111182',
   appId: '1:753970111182:web:e49eac1bab66cc7ae1a69f',
-  measurementId: 'G-M35L5MWKTE'
+  measurementId: 'G-M35L5MWKTE',
 };

@@ -22,7 +22,7 @@ type RootState = {
 
 export const rootReducer = combineReducers<RootState>({
   users,
-  firebase: firebaseReducer
+  firebase: firebaseReducer,
 });
 
 export type RootReducerType = ReturnType<typeof rootReducer>;

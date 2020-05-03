@@ -47,7 +47,7 @@ const Home: React.FC = () => {
   useFirebaseConnect([
     { path: 'purchases' },
     { path: 'others' },
-    { path: 'users' }
+    { path: 'users' },
   ]);
 
   const users = useSelector(

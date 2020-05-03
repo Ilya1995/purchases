@@ -21,7 +21,7 @@ const ItemAdd: React.FC<PropsType> = ({ titleItem }) => {
     const newItem = {
       text: text,
       completed: false,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
     if (text) {
       firebase.push(titleItem, newItem);
@@ -42,8 +42,9 @@ const ItemAdd: React.FC<PropsType> = ({ titleItem }) => {
           id="standard-basic"
           style={{ width: '70%' }}
           value={newItemText}
+          multiline
           inputRef={inputEl}
-          onChange={event => setNewItemText(event.target.value)}
+          onChange={(event) => setNewItemText(event.target.value)}
         />
         <IconButton
           aria-label="comments"

@@ -14,7 +14,7 @@ type PropsType = {
   checkAuth: ({ login, password }: UserAuthType) => void;
 };
 
-const ModalLogin: React.FC<PropsType> = props => {
+const ModalLogin: React.FC<PropsType> = (props) => {
   const handleClickAuth = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const login = event.currentTarget.login.value;
