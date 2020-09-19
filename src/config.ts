@@ -1,13 +1,13 @@
 export type FbConfigType = {
-  apiKey: string;
-  authDomain: string;
-  databaseURL: string;
-  projectId: string;
-  storageBucket: string;
-  messagingSenderId: string;
-  appId: string;
-  measurementId: string;
-};
+  apiKey: string
+  authDomain: string
+  databaseURL: string
+  projectId: string
+  storageBucket: string
+  messagingSenderId: string
+  appId: string
+  measurementId: string
+}
 
 export const fbConfig: FbConfigType = {
   apiKey: 'AIzaSyAvYfkBEguJn7A9MHmwN5Q1E7X8Jce3E5o',
@@ -18,4 +18,4 @@ export const fbConfig: FbConfigType = {
   messagingSenderId: '753970111182',
   appId: '1:753970111182:web:e49eac1bab66cc7ae1a69f',
   measurementId: 'G-M35L5MWKTE',
-};
+}
